@@ -1,0 +1,70 @@
+extends layout
+
+block content
+   script(type="text/javascript", src=base+'/javascripts/robottc.js')
+   script(type='text/javascript', src=base+'/bower_components/angular-sanitize/angular-sanitize.min.js')
+   script(type="text/javascript", src=src=base+'/bower_components/ng-table/dist/ng-table.min.js')
+   script(type="text/javascript", src=src=base+'/bower_components/ng-csv/build/ng-csv.js')
+
+   div(class='container-fluid', id='CaseViewer', ng-app="robottc", ng-controller="ViewerController")
+      h2(id='project')= project
+      hr
+      form(class='form-inline', role='form')
+         div(class='row')
+            div(class='col-md-12')
+               table(class='table', style='background-color: lightcyan', ng-model='tags')
+                  tr
+                     th(class="col-md-1") Filter Tags
+                  tr
+                     td(class="col-md-1", ng-repeat='tag in tags')
+                        //input(id=tag, type='checkbox',  ng-change='caseTable.reload()')
+                        input(type='checkbox', name="selectedTags[]", value="{{tag}}", ng-checked="selectedTags.indexOf(tag) > -1", ng-click="toggleSelection(tag)")
+                        | {{tag}}
+
+         div(class='row')
+            div(class='col-md-12')
+               //div(class='panel-body')
+                  //div(class='table-responsive')
+               //table(class='table', style='background-color: lightcyan', ng-model="suites")
+               p
+                  strong Total Suites:
+                  | {{caseTable.total()}}
+               //p {{caseTable.length}}
+               a(class="btn btn-primary", ng-csv="toCSV", filename="{{projectName}}.csv", field-separator=",", decimal-separator=".") Export to CSV
+               table(class='table table-hover', ng-table="caseTable")
+                  thead
+                     tr(style='background-color: lightblue')
+                        th Test Suite
+                        th Force Tags
+                        th Default Tags
+                        th Test Cases
+                  //each suite in suites
+                  tbody
+                     tr(ng-repeat='suite in $data')
+                        th(style="word-break:break-all;")
+                           a(href=base+"/caseShower/{{suite['_id']}}", target='_blank') {{suite['name']}}
+                        td
+                           //ul(class='list-inline', ng-repeat='tag in suite.force_tags')
+                           //   li(style='padding: 0, float: left, margin: 0') {{tag['value']}}
+                           div(ng-repeat='tag in suite.force_tags')
+                              | {{tag.value}}
+                        td
+                           div(ng-repeat='tag in suite.default_tags')
+                              | {{tag.value}}
+                        td(width='40%')
+                           table(class='table table-striped',  ng-model="suite", style="margin-bottom: 0px")
+                              thead
+                                 tr(style='background-color: lightblue')
+                                    th Case
+                                    th Tags
+                              //each testcase in suite.testcases
+                              tbody
+                                 tr(ng-repeat='testcase in suite.testcases')
+                                    td(style="word-break:break-all;", class='col-md-6') {{testcase['name']}}
+                                    td(class='col-md-2')
+                                       div(ng-repeat='tag in testcase.tags')
+                                          | {{tag.value}}
+                                       //ul(class='list-inline', ng-repeat='tag in testcase.tags')
+                                       //   li {{tag['value']}}
+                                          //each tag in testcase.tags
+                                          //   li= tag.value

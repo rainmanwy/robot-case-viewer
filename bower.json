@@ -1,0 +1,25 @@
+{
+  "name": "robot-case-viewer",
+  "version": "0.0.0",
+  "homepage": "https://github.com/rainmanwy/robot-case-viewer",
+  "authors": [
+    "Rainmanwy <wang_yang1980@hotmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies" : {
+    "jquery": "2.1.2",
+    "bootstrap": "*",
+    "angular": "*",
+    "ng-table": "*",
+    "ng-csv": "*",
+    "angular-sanitize": "*"
+  }
+}
