@@ -1,0 +1,349 @@
+/*@font-face {
+  font-family: "nokia_pure_textregular";
+  font-style: normal;
+  font-weight: normal;
+  src: url("http://networks.nokia.com/sites/all/themes/nsn_nokia/fonts/nokia-pure/nokiapuretext-regular-webfont-optimized.eot?#iefix") format("embedded-opentype"), url("http://networks.nokia.com/sites/all/themes/nsn_nokia/fonts/nokia-pure/nokiapuretext-regular-webfont-optimized.woff") format("woff"), url("http://networks.nokia.com/sites/all/themes/nsn_nokia/fonts/nokia-pure/nokiapuretext-regular-webfont-optimized.ttf") format("truetype"), url("http://networks.nokia.com/sites/all/themes/nsn_nokia/fonts/nokia-pure/nokiapuretext-regular-webfont-optimized.svg#nokia_pure_textregular") format("svg");
+}*/
+/*body {*/
+  /*background-color: #f6f6f6;*/
+  /*font-family: Lato; }*/
+  /*body p {*/
+    /*font-size: 0.9em; }*/
+  /*body p.sub {*/
+    /*color: #999; }*/
+  /*body h1, body h2, body h3, body h4, body h5, body h6 {*/
+    /*text-transform: uppercase;*/
+    /*font-weight: 300; }*/
+
+/*#logo {*/
+  /*color: #333; }*/
+
+.page {
+  width: 1024px;
+  margin: auto;
+  background-color: #FFF;
+  border-radius: 6px;
+  margin-top: -70px;
+  padding: 20px 0px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1); }
+
+.page .header {
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #EEE; }
+
+.page .page-container .container {
+    width: 95%;
+    min-width: 768px;
+}
+
+/*@media (min-width: 1024px) {*/
+  /*.page {*/
+    /*width: 980px; } }*/
+/*@media (min-width: 768px) and (max-width: 979px) {*/
+  /*.page {*/
+    /*width: 764px; } }*/
+/*@media (max-width: 767px) {*/
+  /*body {*/
+    /*padding-left: 0;*/
+    /*padding-right: 0; }*/
+
+  /*.page {*/
+    /*width: 100%; }*/
+
+  /*.page-container {*/
+    /*padding: 0px 20px; }*/
+
+  /*#in-nav ul.pull-right {*/
+    /*top: 0px !important; }*/
+
+  /*.message-sidebar {*/
+    /*margin-right: -20px !important; } }*/
+
+#in-nav {
+  background-color: white;
+  background-repeat: repeat;
+  height: 50px;
+  padding-top: 10px; }
+  #in-nav ul {
+    /*position: relative;*/
+    top: 10px; }
+    #in-nav ul li {
+      list-style-type: none;
+      display: inline; }
+      #in-nav ul li a {
+        padding: 10px; }
+  .container {
+      width: 100%;
+      min-width: 768px;
+  }
+
+#in-sub-nav {
+  width: 100%;
+  min-width: 1078px;
+  background-color: #124191;
+  -moz-box-shadow: inset 0px 0px 10px #205081;
+  -webkit-box-shadow: inset 0px 0px 10px #205081;
+  box-shadow: inset 0px 0px 10px #205081; }
+  #in-sub-nav ul {
+    text-align: center;
+    margin-bottom: 80px; }
+
+  #in-sub-nav ul li {
+    margin-right:1px;
+    list-style-type: none;
+    display: inline-table; }
+
+    #in-sub-nav ul li a:not(#nohover) {
+      display: block;
+      border-radius: 6px;
+      padding: 15px 10px 5px;
+      min-height: 20px;
+      min-width: 64px;
+      margin: 20px 10px 10px;
+      color: #ABD;
+      font-weight: 100; }
+    #in-sub-nav ul li a:hover, #in-sub-nav ul li a.active {
+      background-color: #0072C6;
+      text-decoration: none; }
+    #in-sub-nav ul li span.label.pull-right {
+      position: relative;
+      top: 24px;
+      right: 14px; }
+
+footer {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #999; }
+  footer a {
+  color: #999; }
+
+.batch {
+  background-image: url(../image/white-batch-32.png);
+  display: inline-block;
+  height: 32px;
+  width: 32px; }
+
+.home {
+  background-position: -128px -96px; }
+
+.star {
+  background-position: -192px -96px; }
+
+.forms {
+  background-position: -96px -32px; }
+
+.stream {
+  background-position: 0 -64px; }
+
+.wiki {
+  background-position: -224px -64px; }
+
+.trouble {
+  background-position: -128px -64px; }
+
+.mediation {
+  background-position: -288px -32px; }
+
+.adaptation {
+  background-position: -64px 0; }
+
+.quill {
+  background-position: -288px 0px; }
+
+.plane {
+  background-position: -256px -96px; }
+
+
+.batch-big {
+  background-image: url(../image/white-batch-64.png);
+  display: inline-block;
+  height: 64px;
+  width: 64px; }
+
+.b-wifi {
+  background-position: -256px -64px; }
+
+.b-code {
+  background-position: -64px 0px; }
+
+.b-comment {
+  background-position: -192px -256px; }
+
+.b-flag {
+  background-position: -384px -256px; }
+
+.b-database {
+  background-position: -256px 0px; }
+
+.b-alarm {
+  background-position: -384px 0px; }
+
+/* ============== login ============== */
+.login {
+  padding: 20px;
+  margin-top: 40px;
+  margin-bottom: 80px; }
+
+/* ============== sidebar ============== */
+.sidebar {
+  border-top: 1px solid #EEE; }
+  .sidebar ul {
+    padding: 0;
+    margin: 0; }
+    .sidebar ul li {
+      list-style-type: none; }
+      .sidebar ul li a {
+        display: block;
+        padding: 10px;
+        border-bottom: 1px solid #EEE;
+        text-transform: uppercase; }
+      .sidebar ul li a:hover {
+        background-color: #EEE;
+        /*        color: #FFF;*/
+        text-decoration: none; }
+      .sidebar ul li ul {
+        background-color: #F6F6F6;
+        box-shadow: inset 0 1px 10px #E0E0E0; }
+
+
+
+/* ============== knobs ============== */
+.knob {
+  text-align: center; }
+
+.dropdown-menu {
+margin: 2px 12px 0px;
+width: auto;
+background-color: #fff;
+opacity: 1;
+}
+
+
+#in-sub-nav li > ul > li {
+  width: 100%;
+  padding: 0;
+  line-height:20px;
+}
+
+#in-sub-nav li > ul > li > a {
+  display: block;
+  border-radius: 0;
+  padding: 15px 10px 5px;
+  /*min-height: 22px;*/
+  /*min-width: 42px;*/
+  margin: 0;
+  color: #000;
+  line-height: 18px;
+}
+
+#in-sub-nav li >  ul  > li  > a:hover{
+  background-image: linear-gradient(to bottom, #0072C6, #0072C6);
+  text-decoration: none;
+  color: #fff;
+}
+
+.dropdown-menu li > a {
+background: #ffffff no-repeat center 0;
+color: black;
+}
+
+
+/*div.zTreeDemoBackground {width:250px;height:362px;text-align:left;}*/
+
+ul.ztree {margin-top: 10px;border: 1px solid #617775;background: #f0f6e4;width:320px;height:420px;overflow-y:scroll;overflow-x:auto;}
+ul.log {border: 1px solid #617775;background: #f0f6e4;width:300px;height:170px;overflow: hidden;}
+ul.log.small {height:45px;}
+ul.log li {color: #666666;list-style: none;padding-left: 10px;}
+ul.log li.dark {background-color: #E3E3E3;}
+
+/* ruler */
+div.ruler {height:20px; width:220px; background-color:#f0f6e4;border: 1px solid #333; margin-bottom: 5px; cursor: pointer}
+div.ruler div.cursor {height:20px; width:30px; background-color:#3C6E31; color:white; text-align: right; padding-right: 5px; cursor: pointer}
+
+
+
+#flash-messages {
+  position: fixed;
+  background-color: rgba(255, 191, 0, 0.75);
+  padding: 5px 15px;
+  display: inline-block;
+  text-align: center;
+  width: 200px;
+  top: 50px;
+  left: 50%;
+  margin-left: -100px;
+  border-radius: 5px;
+  font-size: .7em;
+}
+.slide-down { display: none !important; }
+.slide-down.ng-hide-remove {
+  display: block !important;
+  animation:
+    slide-down-enter 250ms ease-out,
+    slide-down-leave 500ms 3s ease;
+}
+@keyframes slide-down-enter {
+  from { opacity: 0; transform: translateY(-75%); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes slide-down-leave {
+  from { opacity: 1; transform: translateY(0); }
+  to { opacity: 0; transform: translateY(75%); }
+}
+
+.tool-title {
+    top: 20px;
+    margin-left: 20px;
+}
+/********
+nasda library page
+*/
+.nasda-title {
+    background-color: #bce8f1;
+    top: 50px;
+    margin-left: 20px;
+    margin-right: 15px;
+}
+
+.nasda-info {
+    margin-left: 20px;
+}
+.log-box {
+    border: solid 1px #CCCCCC;
+	background-color: #f9f9f9;
+	display: table;
+	padding: 4px;
+	margin: 4px 4px 0px 4px;
+    top: 100px;
+}
+
+/*****
+dataTable
+*/
+table.dataTable tr.row_selected {
+  background-color: #C9DDE1;
+}
+
+td.details-control {
+    background: url('../image/details_open.png') no-repeat center center;
+    cursor: pointer;
+}
+tr.details td.details-control {
+    background: url('../image/details_close.png') no-repeat center center;
+}
+table.dataTable tr td:first-child { text-align: center; } table.dataTable tr td:first-child:before { content: "\f096"; /* fa-square-o */ font-family: FontAwesome; } table.dataTable tr.selected td:first-child:before { content: "\f046"; /* fa-check-square-o */ } table.dataTable tr td.dataTables_empty:first-child:before { content: ""; }
+
+/*.dataTables_filter {*/
+    /**/
+    /*width: 50%;*/
+    /*float: right;*/
+    /**/
+    /*width: 43%;*/
+    /*float: left;*/
+    /*text-align: right;*/
+/*}*/
+
+.container {
+    width: 1024px;
+}
