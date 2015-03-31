@@ -2,7 +2,6 @@
 
 export NODE_ENV=production
 export BASE_URL=/caseviewer
-#export NODE_ENV=development
 DAEMON="node www"
 NAME=CaseViewer
 DESC=CaseViewer

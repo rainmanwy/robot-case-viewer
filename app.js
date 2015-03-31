@@ -21,7 +21,7 @@ app.enable('trust proxy');
 
 var base = '';
 if (process.env.BASE_URL != null) {
-    base = process.env.Base_URL;
+    base = process.env.BASE_URL;
 }
 console.log("BASE URL:"+base);
 
